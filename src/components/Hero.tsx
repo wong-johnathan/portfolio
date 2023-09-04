@@ -3,7 +3,10 @@ import { socialMediaItems } from "./NavLinks";
 
 const Hero = () => {
   return (
-    <div className='w-full h-screen text-center'>
+    <div
+      className='w-full h-screen text-center'
+      id='home'
+    >
       <div
         className='absolute top-0 left-0 w-full h-screen opacity-20 z-[-1]'
         style={{

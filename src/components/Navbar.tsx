@@ -10,31 +10,43 @@ import {
   navItems,
   socialMediaItems,
 } from "./NavLinks";
-import { useState } from "react";
+import {
+  useEffect,
+  useState,
+} from "react";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] =
+    useState(false);
   const handleNav = () => {
     setNav((prev) => !prev);
   };
+
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90)
+        setShadow(true);
+      else setShadow(false);
+    };
+    window.addEventListener(
+      "scroll",
+      handleShadow
+    );
+  }, []);
+
   return (
-    <div className='w-full h-20 fixed shadow-xl z-50 bg-white/50'>
+    <div
+      className={
+        shadow
+          ? "w-full h-20 fixed shadow-xl z-50 bg-white/90 transition-all duration-300"
+          : "w-full h-20 fixed z-50 bg-white/0 transition-all duration-300"
+      }
+    >
       <div className='w-full px-2 flex justify-between items-center content-center h-full 2xl:px-16'>
-        <Link href='/'>
-          <div className='flex flex-row items-center group cursor-pointer'>
-            <Image
-              src='/picture.jpeg'
-              alt='Logo'
-              width='60'
-              height='80'
-              className='rounded-full border-[#763bf6] border-2 group-hover:border-[#5b2ebd] transition-all duration-300 ease-in-out'
-            />
-            <span className='uppercase p-4 font-bold group-hover:text-[#5b2ebd] transition-all duration-300'>
-              Johnathan Wong
-            </span>
-          </div>
-        </Link>
-        {/* <ul className='md:flex hidden uppercase'>
+        <Logo />
+        <ul className='md:flex hidden uppercase'>
           {navItems().map(
             (item, index) => (
               <Link
@@ -47,7 +59,7 @@ const Navbar = () => {
               </Link>
             )
           )}
-        </ul> */}
+        </ul>
         <div
           className='md:hidden cursor-pointer'
           onClick={handleNav}
@@ -77,20 +89,7 @@ const Navbar = () => {
         >
           <div>
             <div className='flex justify-between items-center border-b pb-4'>
-              <Link href='/'>
-                <div className='flex items-center group cursor-pointer flex-row'>
-                  <Image
-                    src='/picture.jpeg'
-                    alt='Logo'
-                    width='60'
-                    height='80'
-                    className='rounded-full shadow-lg shadow-gray-400 border-[#763bf6] border-2 group-hover:border-[#5b2ebd] transition-all duration-300 ease-in-out'
-                  />
-                  <span className='uppercase p-4 font-bold group-hover:text-[#5b2ebd] transition-all duration-300'>
-                    Johnathan
-                  </span>
-                </div>
-              </Link>
+              <Logo />
               <div
                 className='rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer'
                 onClick={handleNav}
@@ -128,12 +127,18 @@ const Navbar = () => {
             <div className='flex flex-row pt-4 space-x-6'>
               {socialMediaItems().map(
                 (item, index) => (
-                  <div
-                    className='p-3 rounded-full cursor-pointer shadow-lg shadow-gray-400 cursor-ponter hover:scale-110 duration-300 hover:text-[#5b2ebd] text-[#763bf6] ease-in'
-                    key={`${index}`}
+                  <Link
+                    href={item.link}
+                    key={index}
+                    target='_blank'
                   >
-                    {<item.icon />}
-                  </div>
+                    <div
+                      className='p-3 rounded-full cursor-pointer shadow-lg shadow-gray-400 cursor-ponter hover:scale-110 duration-300 hover:text-[#5b2ebd] text-[#763bf6] ease-in'
+                      key={`${index}`}
+                    >
+                      {<item.icon />}
+                    </div>
+                  </Link>
                 )
               )}
             </div>
