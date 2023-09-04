@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable react/no-unescaped-entities */
 import { skills } from "./NavLinks";
 
 const About = () => {
