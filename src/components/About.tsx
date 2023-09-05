@@ -12,6 +12,7 @@ const About = () => {
         <p className='uppercase text-4xl font-bold w-full pb-2'>
           About Me
         </p>
+        <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
       </div>
       <div className='max-w-[1200px] py-8 mx-auto w-full md:grid grid-cols-2 gap-16 items-center px-8 justify-content'>
         <div className='col-span-1 mb-2'>
