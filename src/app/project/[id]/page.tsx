@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import projects from "../../../../components/projectsJson";
 import SkillsBtn from "@/components/SkillsBtn";
+import projects from "@/components/projectsJson";
 import Image from "next/image";
 import Link from "next/link";
 
