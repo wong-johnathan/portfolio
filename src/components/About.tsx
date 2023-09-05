@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { skills } from "./NavLinks";
+import SkillsBtn from "./SkillsBtn";
 
 const About = () => {
   return (
@@ -11,7 +12,6 @@ const About = () => {
         <p className='uppercase text-4xl font-bold w-full pb-2'>
           About Me
         </p>
-        <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
       </div>
       <div className='max-w-[1200px] py-8 mx-auto w-full md:grid grid-cols-2 gap-16 items-center px-8 justify-content'>
         <div className='col-span-1 mb-2'>
@@ -59,14 +59,14 @@ const About = () => {
             My Skills
           </h2>
           <div className='flex flex-wrap gap-4 py-2'>
-            {skills().map((skill) => (
-              <div
-                key={skill}
-                className='rounded-md h-[40px] bg-gray-300 text-gray-600 hover:text-white text-sm font-bold flex justify-center items-center px-8 hover:scale-105 transition-all duration-300 shadow-md shadow-gray-400'
-              >
-                {skill}
-              </div>
-            ))}
+            {skills().map(
+              (skill, index) => (
+                <SkillsBtn
+                  key={`${skill}-${index}`}
+                  skill={skill}
+                />
+              )
+            )}
           </div>
         </div>
       </div>

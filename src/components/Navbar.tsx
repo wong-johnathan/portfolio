@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import {
   AiOutlineClose,
@@ -15,14 +14,18 @@ import {
   useState,
 } from "react";
 import Logo from "./Logo";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] =
     useState(false);
   const handleNav = () => {
     setNav((prev) => !prev);
   };
+  const [isMain, setIsMain] =
+    useState(true);
 
   useEffect(() => {
     const handleShadow = () => {
@@ -36,15 +39,25 @@ const Navbar = () => {
     );
   }, []);
 
+  useEffect(() => {
+    if (pathname === "/")
+      setIsMain(true);
+    else setIsMain(false);
+  }, [pathname]);
+
   return (
     <div
       className={
         shadow
-          ? "w-full h-20 fixed shadow-xl z-50 bg-white/90 transition-all duration-300"
-          : "w-full h-20 fixed z-50 bg-white/0 transition-all duration-300"
+          ? `w-full h-20 fixed shadow-xl z-50 bg-white transition-all duration-300`
+          : `w-full h-20 fixed z-50 ${
+              isMain
+                ? "bg-white/0"
+                : "bg-white/60 shadow-xl"
+            } transition-all duration-300`
       }
     >
-      <div className='w-full px-2 flex justify-between items-center content-center h-full 2xl:px-16'>
+      <div className='w-full px-4 flex justify-between items-center content-center h-full md:px-8 2xl:px-16'>
         <Logo />
         <ul className='md:flex hidden uppercase'>
           {navItems().map(
