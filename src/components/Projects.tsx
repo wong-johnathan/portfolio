@@ -9,14 +9,13 @@ const Projects = () => {
       className='w-full md:h-screen py-16 flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 flex-col'
       id='projects'
     >
-      <div className='justify-center flex flex-col items-center gap-4'>
+      <div className='justify-center flex flex-col items-center gap-4 px-8'>
         <p className='uppercase text-4xl font-bold pb-2'>
           Projects
         </p>
         <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
         <p className='text-gray-800 py-2 m-auto text-center'>
-          Here are some of the projects
-          I have done in my past.
+          Past projects executed
         </p>
       </div>
       <div className='max-w-[1200px] py-8 mx-auto w-full grid grid-cols-2 gap-8 md:gap-16 items-center px-8 justify-content'>
