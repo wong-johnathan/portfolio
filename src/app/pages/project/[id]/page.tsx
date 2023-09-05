@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import projects from "./projects";
+import projects from "../../../../components/projectsJson";
 import SkillsBtn from "@/components/SkillsBtn";
 import Image from "next/image";
+import Link from "next/link";
 
 type ProjectProps = {
   params: { id: string };
@@ -47,7 +48,7 @@ export default function Project({
               width={900}
               height={100}
               alt={project.id}
-              className='rounded-lg shadow-xl mx-auto mb-16'
+              className='rounded-lg shadow-xl mx-auto mb-16 hover:scale-[102%] transition-all duration-300'
             />
             <div className='pb-8'>
               <p className='uppercase text-4xl font-bold pb-2'>
@@ -85,6 +86,13 @@ export default function Project({
                 )
               )}
             </div>
+          </div>
+          <div className='pt-16'>
+            <Link href='/'>
+              <span className='hover:text-[#763bf6] cursor-pointer font-bold'>
+                {"<--Back"}
+              </span>
+            </Link>
           </div>
         </div>
         <Footer />

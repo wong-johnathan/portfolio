@@ -5,6 +5,7 @@ type projectType = {
   paragraphs: string[];
   technologies: string[];
   image: string;
+  summary: string;
 };
 const projects = (): projectType[] => [
   {
@@ -29,8 +30,29 @@ const projects = (): projectType[] => [
       "Kubernetes",
       "Bitbucket",
       "Opencerts",
+      "Figma",
     ],
     image: "/3dcerts.png",
+    summary:
+      "I led blockchain implementation for certificate authentication, built portals, decentralized wallet, and user-centric design, enhancing credential verification and trust.",
+  },
+  {
+    id: "my-beneficiary",
+    title: "My Beneficiary",
+    subtitle:
+      "This page contains the case study of my internship in New Creation Church which includes the Project Overview and Tools Used.",
+    paragraphs: [
+      "I'm humbled to have been a part of the team that worked on a Progressive Web Application (PWA) using React.js. My role involved focusing on user-centered design and UX/UI feasibility. The project was complex, including features like visit logging, attendance tracking, and CRUD functionality. This experience helped me grow in development and design, contributing to an innovative and user-friendly application that I'm grateful to have been involved with.",
+    ],
+    technologies: [
+      "Reactjs",
+      "Expressjs",
+      "Bootstrap",
+      "Figma",
+    ],
+    image: "/newcreation.png",
+    summary:
+      "I contributed to a React.js-based PWA project, emphasizing user-centric design, resulting in an innovative and user-friendly application.",
   },
 ];
 
