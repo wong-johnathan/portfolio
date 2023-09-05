@@ -34,7 +34,7 @@ const projects = (): projectType[] => [
     ],
     image: "/3dcerts.png",
     summary:
-      "I led blockchain implementation for certificate authentication, built portals, decentralized wallet, and user-centric design, enhancing credential verification and trust.",
+      "Blockchain implementation for certificate authentication, built portals, decentralized wallet, and user-centric design, enhancing credential verification and trust.",
   },
   {
     id: "my-beneficiary",
@@ -52,7 +52,7 @@ const projects = (): projectType[] => [
     ],
     image: "/newcreation.png",
     summary:
-      "I contributed to a React.js-based PWA project, emphasizing user-centric design, resulting in an innovative and user-friendly application.",
+      "React.js-based PWA project, emphasizing user-centric design, resulting in an innovative and user-friendly application.",
   },
 ];
 
