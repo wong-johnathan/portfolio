@@ -13,10 +13,10 @@ export const navItems = () => [
     text: "About",
     link: "/#about",
   },
-  // {
-  //   text: "Projects",
-  //   link: "/#projects",
-  // },
+  {
+    text: "Projects",
+    link: "/#projects",
+  },
   // {
   //   text: "Contact",
   //   link: "/#contact",
@@ -27,10 +27,6 @@ export const socialMediaItems = () => [
   {
     icon: SiLinkedin,
     link: "https://www.linkedin.com/in/johnathan-wong-362332192/",
-  },
-  {
-    icon: SiFacebook,
-    link: "https://www.facebook.com/johnathan.wong.583",
   },
   {
     icon: SiGithub,
