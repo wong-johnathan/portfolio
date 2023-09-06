@@ -1,5 +1,5 @@
 import {
-  SiFacebook,
+  SiCodereview,
   SiGithub,
   SiLinkedin,
 } from "react-icons/si";
@@ -31,6 +31,10 @@ export const socialMediaItems = () => [
   {
     icon: SiGithub,
     link: "https://github.com/wong-johnathan",
+  },
+  {
+    icon: SiCodereview,
+    link: "https://github.com/wong-johnathan/portfolio",
   },
 ];
 
