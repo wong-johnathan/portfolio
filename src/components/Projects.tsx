@@ -14,9 +14,6 @@ const Projects = () => {
           Projects
         </p>
         <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
-        <p className='text-gray-800 py-2 m-auto text-center'>
-          Past projects executed
-        </p>
       </div>
       <div className='max-w-[1200px] py-8 mx-auto w-full grid grid-cols-2 gap-8 md:gap-16 items-center px-8 justify-content'>
         {projects().map((project) => (
