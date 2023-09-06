@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 type projectType = {
   id: string;
   title: string;
@@ -6,6 +8,7 @@ type projectType = {
   technologies: string[];
   image: string;
   summary: string;
+  video?: string;
 };
 const projects = (): projectType[] => [
   {
@@ -53,6 +56,30 @@ const projects = (): projectType[] => [
     image: "/newcreation.png",
     summary:
       "React.js-based PWA project, emphasizing user-centric design, resulting in an innovative and user-friendly application.",
+  },
+  {
+    id: "3d-virtual-musuem-in-vr",
+    title:
+      "3D Virtual Museum Design in VR",
+    subtitle:
+      "This project was tasked to create an interactive 3D VR world of the Chinese Heritage Centre in Nanyang Technological University.",
+    paragraphs: [
+      "The objective of the project is creating a 3D VR museum that users can navigate freely around. The user will be able to visit the experience the museum fully without being physically present. Most art works and pieces are interactive, users can pick them up to have a closer look on the details if available.",
+      "The 3D VR museum will be based off the Chinese Heritage Centre (CHC) located at Nanyang Technological University. Users will be given the freedom to navigate around themselves and take a self-guided tour of the museum. Since the 3D model of the museum is already available, the interactive functions and 3d VR experience will be implemented through Unity3D engine using C# language. Due to Unity3D’s version compatibility of the Chinese Heritage Centre 3D model some objects will have to be remodeled and re- textured.",
+      "The scope of the project is to enhance the user’s experience and interaction with the 3D VR museum. The 3D VR museum arts work and pieces must be intractable or have some form of interactive application so to enhance the user’s experience compared to traditional museums.",
+    ],
+    technologies: [
+      "Unity3d",
+      "HTC Vive",
+      "C#",
+      "Blender",
+      "Photoshop",
+    ],
+    image: "/fypposter.jpg",
+    video:
+      "https://www.youtube.com/embed/Eixmm1bpaik?si=iS8EXWNCToErMuY5",
+    summary:
+      "The use of AR and VR technology allows users to immerse themselves into the virtual world locking out the physical world.",
   },
 ];
 

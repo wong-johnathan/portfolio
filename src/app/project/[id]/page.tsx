@@ -87,14 +87,37 @@ export default function Project({
               )}
             </div>
           </div>
-          <div className='pt-16'>
-            <Link href='/'>
-              <span className='hover:text-[#763bf6] cursor-pointer font-bold'>
-                {"<--Back"}
-              </span>
-            </Link>
-          </div>
         </div>
+        {project.video && (
+          <div className='w-full px-16 py-32 bg-gradient-to-b  from-gray-100 to-gray-300'>
+            <div className='max-w-[1200px] flex justify-center h-full flex-col mx-auto'>
+              <div className='pb-8'>
+                <p className='uppercase text-4xl font-bold pb-2'>
+                  Video
+                </p>
+                <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
+              </div>
+              <div className='flex flex-wrap gap-4 py-2'>
+                <iframe
+                  className='w-[300px] h-[169px] md:w-[1280px] md:h-[720px]'
+                  width='1280'
+                  height='720'
+                  src={project.video}
+                  title={project.title}
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                ></iframe>
+              </div>
+            </div>
+            <div className='pt-16'>
+              <Link href='/'>
+                <span className='hover:text-[#763bf6] cursor-pointer font-bold'>
+                  {"<--Back"}
+                </span>
+              </Link>
+            </div>
+          </div>
+        )}
+
         <Footer />
       </main>
     );

@@ -6,7 +6,7 @@ import Link from "next/link";
 const Projects = () => {
   return (
     <div
-      className='w-full md:h-screen py-16 flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 flex-col'
+      className='w-full py-16 flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 flex-col'
       id='projects'
     >
       <div className='justify-center flex flex-col items-center gap-4 px-8'>
