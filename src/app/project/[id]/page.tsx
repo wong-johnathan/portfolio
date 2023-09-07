@@ -31,7 +31,7 @@ export default function Project({
             }}
           ></div>
           <div className='w-full h-full items-center flex justify-center mx-auto flex-col bg-black/70'>
-            <h1 className='text-gray-100 py-2'>
+            <h1 className='text-gray-100 py-2 text-center mt-8 md:mt-0'>
               {project.title}
             </h1>
             {project.subtitle && (
