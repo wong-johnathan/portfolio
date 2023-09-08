@@ -1,7 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import InnerSection from "@/components/Section/InnerSection";
 import SkillsBtn from "@/components/SkillsBtn";
+import Title from "@/components/Title";
 import projects from "@/components/projectsJson";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,21 +43,19 @@ export default function Project({
             )}
           </div>
         </div>
-        <div className='w-full px-16 py-16 bg-gradient-to-b  from-gray-100 to-gray-300'>
-          <div className='max-w-[1200px] flex justify-center h-full flex-col mx-auto'>
-            <Image
-              src={project.image}
-              width={900}
-              height={100}
-              alt={project.id}
-              className='rounded-lg shadow-xl mx-auto mb-16 hover:scale-[102%] transition-all duration-300'
-            />
-            <div className='pb-8'>
-              <p className='uppercase text-4xl font-bold pb-2'>
-                About
-              </p>
-              <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
-            </div>
+        <InnerSection className='gap-8 flex flex-col'>
+          <Image
+            src={project.image}
+            width={900}
+            height={100}
+            alt={project.id}
+            className='rounded-lg shadow-xl mx-auto mb-16 hover:scale-[102%] transition-all duration-300'
+          />
+          <Title
+            title='About'
+            underlineAlignment='items-start'
+          />
+          <div className='gap-8'>
             {project.paragraphs.map(
               (paragraph, index) => (
                 <p
@@ -67,16 +67,14 @@ export default function Project({
               )
             )}
           </div>
-        </div>
+        </InnerSection>
         <div className='w-full px-16 py-32 bg-gradient-to-b  from-gray-100 to-gray-300'>
           <div className='max-w-[1200px] flex justify-center h-full flex-col mx-auto'>
-            <div className='pb-8'>
-              <p className='uppercase text-4xl font-bold pb-2'>
-                Technology
-              </p>
-              <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
-            </div>
-            <div className='flex flex-wrap gap-4 py-2'>
+            <Title
+              title='Technology'
+              underlineAlignment='items-start'
+            />
+            <div className='flex flex-wrap gap-4 py-8'>
               {project.technologies.map(
                 (technology, index) => (
                   <SkillsBtn

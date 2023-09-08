@@ -2,20 +2,15 @@ import Image from "next/image";
 import projects from "./projectsJson";
 import React from "react";
 import Link from "next/link";
+import Title from "./Title";
+import InnerSection from "./Section/InnerSection";
+import Section from "./Section/Section";
 
 const Projects = () => {
   return (
-    <div
-      className='w-full py-16 flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 flex-col'
-      id='projects'
-    >
-      <div className='justify-center flex flex-col items-center gap-4 px-8'>
-        <p className='uppercase text-4xl font-bold pb-2'>
-          Projects
-        </p>
-        <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
-      </div>
-      <div className='max-w-[1200px] py-8 mx-auto w-full grid grid-cols-2 gap-8 md:gap-16 items-center px-8 justify-content'>
+    <Section id='projects'>
+      <Title title='Projects' />
+      <InnerSection className='grid grid-cols-2 gap-8 md:gap-16'>
         {projects().map((project) => (
           <React.Fragment
             key={project.id}
@@ -39,15 +34,15 @@ const Projects = () => {
               <Link
                 href={`/project/${project.id}`}
               >
-                <button className="px-8 py-2">
+                <button className='px-8 py-2'>
                   View More
                 </button>
               </Link>
             </div>
           </React.Fragment>
         ))}
-      </div>
-    </div>
+      </InnerSection>
+    </Section>
   );
 };
 

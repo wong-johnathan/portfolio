@@ -14,13 +14,13 @@ export const navItems = () => [
     link: "/#about",
   },
   {
+    text: "Experiences",
+    link: "/#experiences",
+  },
+  {
     text: "Projects",
     link: "/#projects",
   },
-  // {
-  //   text: "Contact",
-  //   link: "/#contact",
-  // },
 ];
 
 export const socialMediaItems = () => [

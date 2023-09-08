@@ -1,25 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
 import { skills } from "./NavLinks";
+import InnerSection from "./Section/InnerSection";
+import Section from "./Section/Section";
 import SkillsBtn from "./SkillsBtn";
+import Title from "./Title";
 
 const About = () => {
   return (
-    <div
-      className='w-full md:h-screen py-16 flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 flex-col'
-      id='about'
-    >
-      <div className='justify-center flex flex-col items-center'>
-        <p className='uppercase text-4xl font-bold w-full pb-2'>
-          About Me
-        </p>
-        <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
-      </div>
-      <div className='max-w-[1200px] py-8 mx-auto w-full md:grid grid-cols-2 gap-16 items-center px-8 justify-content'>
-        <div className='col-span-1 mb-2'>
-          <h2 className='py-2 text-xl'>
+    <Section id='about'>
+      <Title title='About' />
+      <InnerSection
+        className='md:grid grid-cols-2 gap-8'
+      >
+        <div className='col-span-1 mb-2 flex gap-3 flex-col'>
+          <h2 className='text-xl'>
             Who I Am
           </h2>
-          <p className='py-2 text-gray-700'>
+          <p className='text-gray-700'>
             I'm Johnathan Wong, and I'm
             a full-stack developer &
             support engineer with a
@@ -31,12 +28,12 @@ const About = () => {
             development to game
             development.
           </p>
-          <p className='py-2 text-gray-700'>
+          <p className='text-gray-700'>
             I'm most comfortable using
             MongoDB, React, ExpressJS &
             NodeJS.
           </p>
-          <p className='py-2 text-gray-700'>
+          <p className='text-gray-700'>
             I have a good understanding
             of NoSQL & SQL databases
             like MongoDB, Postgres &
@@ -48,7 +45,7 @@ const About = () => {
             production (such as
             Kubernetes).
           </p>
-          <p className='py-2 text-gray-700'>
+          <p className='text-gray-700'>
             I love learning new things
             and am always looking for an
             opportunity to grow as a
@@ -56,7 +53,7 @@ const About = () => {
           </p>
         </div>
         <div className='col-span-1 mb-2'>
-          <h2 className='py-2 text-xl'>
+          <h2 className='text-xl'>
             My Skills
           </h2>
           <div className='flex flex-wrap gap-4 py-2'>
@@ -70,8 +67,8 @@ const About = () => {
             )}
           </div>
         </div>
-      </div>
-    </div>
+      </InnerSection>
+    </Section>
   );
 };
 
