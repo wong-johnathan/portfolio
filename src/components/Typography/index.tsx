@@ -3,8 +3,6 @@ import { Tailwindest } from "tailwindest";
 
 type TypographyType = {
   children: ReactNode;
-  fontSize?: Tailwindest["fontSize"];
-  mdFontSize?: Tailwindest["fontSize"];
   fontWeight?: Tailwindest["fontWeight"];
   textTransform?: Tailwindest["textTransform"];
   width?: Tailwindest["width"];
@@ -15,8 +13,6 @@ type TypographyType = {
 
 export const TitleLarge = ({
   children,
-  fontSize = "text-2xl",
-  mdFontSize = "text-4xl",
   fontWeight = "font-bold",
   textTransform = "normal-case",
   width = "w-full",
@@ -26,11 +22,8 @@ export const TitleLarge = ({
 }: TypographyType) => {
   return (
     <h1
-      className={`${textTransform} ${fontSize} ${
-        mdFontSize
-          ? `md:${mdFontSize}`
-          : ""
-      } ${fontWeight} ${width} ${
+      className={`${textTransform} text-2xl md:text-4xl
+           ${fontWeight} ${width} ${
         color ?? ""
       } ${textAlign} ${maxWidth ?? ""}`}
     >
@@ -41,8 +34,6 @@ export const TitleLarge = ({
 
 export const TitleMedium = ({
   children,
-  fontSize = "text-xl",
-  mdFontSize = "text-3xl",
   fontWeight = "font-bold",
   textTransform = "normal-case",
   width = "w-full",
@@ -52,11 +43,7 @@ export const TitleMedium = ({
 }: TypographyType) => {
   return (
     <h2
-      className={`${textTransform} ${fontWeight} ${
-        mdFontSize
-          ? `md:${mdFontSize}`
-          : ""
-      } ${fontSize} ${width} ${
+      className={`${textTransform} ${fontWeight} text-xl md:text-3xl  ${width} ${
         color ?? ""
       } ${textAlign} ${maxWidth ?? ""}`}
     >
@@ -67,8 +54,6 @@ export const TitleMedium = ({
 
 export const TitleSmall = ({
   children,
-  fontSize = "text-sm",
-  mdFontSize = "text-2xl",
   fontWeight = "font-bold",
   textTransform = "normal-case",
   width = "w-full",
@@ -78,11 +63,7 @@ export const TitleSmall = ({
 }: TypographyType) => {
   return (
     <h2
-      className={`${textTransform} ${fontSize} ${
-        mdFontSize
-          ? `md:${mdFontSize}`
-          : ""
-      } ${fontWeight} ${width} ${
+      className={`${textTransform} text-sm md:text-2xl ${fontWeight} ${width} ${
         color ?? ""
       } ${textAlign} ${maxWidth ?? ""}`}
     >
@@ -106,7 +87,7 @@ export const BodyText = ({
 }: BodyTextProp) => {
   return (
     <p
-      className={`${color} ${maxWidth} text-sm md:text-md ${textAlign}`}
+      className={`${color} ${maxWidth} text-xs md:text-sm  ${textAlign}`}
     >
       {children}
     </p>
