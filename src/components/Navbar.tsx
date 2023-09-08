@@ -92,18 +92,21 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <ul className="uppercase flex flex-col py-4">
+            <ul className="uppercase flex flex-col gap-4 py-4">
               {navItems().map((item, index) => (
                 <Link
                   href={item.link}
                   key={`${item.text}-${index}`}
                   onClick={() => setNav(false)}
                 >
-                  <li className="py-4 hover:border-b border-[#5b2ebd] text-sm hover:text-[#5b2ebd] dark:hover:text-white">
+                  <li className="hover:border-b border-[#5b2ebd] text-sm hover:text-[#5b2ebd] dark:hover:text-white">
                     {item.text}
                   </li>
                 </Link>
               ))}
+              <li className="text-sm font-bold">
+                <ThemeSwitcher />
+              </li>
             </ul>
           </div>
           <div className="pt-4">
