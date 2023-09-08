@@ -2,7 +2,13 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import InnerSection from "@/components/Section/InnerSection";
+import Section from "@/components/Section/Section";
 import SkillsBtn from "@/components/SkillsBtn";
+import {
+  BodyText,
+  TitleLarge,
+  TitleSmall,
+} from "@/components/Typography";
 import SectionTitle from "@/components/Typography/SectionTitle";
 import projects from "@/components/projectsJson";
 import Image from "next/image";
@@ -32,47 +38,58 @@ export default function Project({
               backgroundSize: "cover",
             }}
           ></div>
-          <div className='w-full h-full items-center flex justify-center mx-auto flex-col bg-black/70'>
-            <h1 className='text-gray-100 py-2 text-center mt-8 md:mt-0'>
+          <div className='w-full h-full flex justify-center items-center flex-col bg-black/70 gap-4'>
+            <TitleLarge color='text-white'>
               {project.title}
-            </h1>
+            </TitleLarge>
             {project.subtitle && (
-              <p className='text-gray-300 max-w-[70%] md:max-w-[50%] mx-auto my-4 text-lg text-center'>
+              <TitleSmall
+                maxWidth='max-w-[50%]'
+                color='text-gray-300'
+                textAlign='text-center'
+              >
                 {project.subtitle}
-              </p>
+              </TitleSmall>
             )}
           </div>
         </div>
-        <InnerSection className='gap-8 flex flex-col'>
-          <Image
-            src={project.image}
-            width={900}
-            height={100}
-            alt={project.id}
-            className='rounded-lg shadow-xl mx-auto mb-16 hover:scale-[102%] transition-all duration-300'
-          />
-          <SectionTitle underlineAlignment='items-start'>
-            About
-          </SectionTitle>
-          <div className='gap-8'>
-            {project.paragraphs.map(
-              (paragraph, index) => (
-                <p
-                  key={index}
-                  className='py-2 text-gray-700'
-                >
-                  {paragraph}
-                </p>
-              )
-            )}
-          </div>
-        </InnerSection>
-        <div className='w-full px-16 py-32 bg-gradient-to-b  from-gray-100 to-gray-300'>
-          <div className='max-w-[1200px] flex justify-center h-full flex-col mx-auto'>
+        <Section id='about'>
+          <InnerSection
+            justifyContent='justify-start'
+            alignItems='items-start'
+            className='gap-4 flex flex-col'
+          >
+            <Image
+              src={project.image}
+              width={900}
+              height={100}
+              alt={project.id}
+              className='rounded-lg shadow-xl mx-auto mb-16 hover:scale-[102%] transition-all duration-300'
+            />
+            <SectionTitle underlineAlignment='items-start'>
+              About
+            </SectionTitle>
+            <div className='gap-4 flex flex-col'>
+              {project.paragraphs.map(
+                (paragraph, index) => (
+                  <BodyText key={index}>
+                    {paragraph}
+                  </BodyText>
+                )
+              )}
+            </div>
+          </InnerSection>
+        </Section>
+        <Section id='technology'>
+          <InnerSection
+            justifyContent='justify-start'
+            alignItems='items-start'
+            className='gap-4 flex flex-col'
+          >
             <SectionTitle underlineAlignment='items-start'>
               Technology
             </SectionTitle>
-            <div className='flex flex-wrap gap-4 py-8'>
+            <div className='flex flex-wrap gap-4'>
               {project.technologies.map(
                 (technology, index) => (
                   <SkillsBtn
@@ -82,36 +99,34 @@ export default function Project({
                 )
               )}
             </div>
-          </div>
-        </div>
+          </InnerSection>
+        </Section>
         {project.video && (
-          <div className='w-full px-16 py-32 bg-gradient-to-b  from-gray-100 to-gray-300'>
-            <div className='max-w-[1200px] flex justify-center h-full flex-col mx-auto'>
-              <div className='pb-8'>
-                <p className='uppercase text-4xl font-bold pb-2'>
-                  Video
-                </p>
-                <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
-              </div>
-              <div className='flex flex-wrap gap-4 py-2'>
+          <Section id='video'>
+            <InnerSection
+              justifyContent='justify-start'
+              alignItems='items-start'
+              className='gap-4 flex flex-col'
+            >
+              <SectionTitle underlineAlignment='items-start'>
+                Video
+              </SectionTitle>
+              <div className='aspect-w-16 aspect-h-9 w-full'>
                 <iframe
-                  className='w-[300px] h-[169px] md:w-[1280px] md:h-[720px]'
-                  width='1280'
-                  height='720'
                   src={project.video}
                   title={project.title}
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 ></iframe>
               </div>
-            </div>
-            <div className='pt-16'>
-              <Link href='/'>
-                <span className='hover:text-[#763bf6] cursor-pointer font-bold'>
-                  {"<--Back"}
-                </span>
-              </Link>
-            </div>
-          </div>
+              <div className='pt-16'>
+                <Link href='/'>
+                  <span className='hover:text-[#763bf6] cursor-pointer font-bold'>
+                    {"<--Back"}
+                  </span>
+                </Link>
+              </div>
+            </InnerSection>
+          </Section>
         )}
 
         <Footer />

@@ -16,7 +16,7 @@ const InnerSection = ({
 }: InnerSectionProp) => {
   return (
     <div
-      className={`max-w-[1200px] py-8 mx-auto w-full items- px-8 ${alignItems} ${justifyContent} ${className}`}
+      className={`max-w-[1200px] py-8 mx-auto w-full px-8 ${alignItems} ${justifyContent} ${className}`}
     >
       {children}
     </div>

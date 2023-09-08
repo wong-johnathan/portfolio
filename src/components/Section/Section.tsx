@@ -14,7 +14,7 @@ type SectionProps = {
   gradientFrom?: Tailwindest["gradientStart"];
   gradientEnd?: Tailwindest["gradientEnd"];
   flexDirection?: Tailwindest["flexDirection"];
-  height?:Tailwindest['height']
+  height?: Tailwindest["height"];
 };
 
 const Section = ({
@@ -28,11 +28,13 @@ const Section = ({
   gradientFrom = "from-gray-100",
   gradientEnd = "to-gray-300",
   flexDirection = "flex-col",
-  height
+  height,
 }: SectionProps) => {
   return (
     <div
-      className={`${width} ${paddingY} flex ${justifyContent} ${alignItems} ${gradient} ${gradientFrom} ${gradientEnd} ${flexDirection} ${height}`}
+      className={`${width} ${paddingY} flex ${justifyContent} ${alignItems} ${
+        gradient ? gradient : ""
+      } ${gradientFrom} ${gradientEnd} ${flexDirection} ${height}`}
       id={id}
     >
       {children}
