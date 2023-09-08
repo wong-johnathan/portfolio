@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-gradient-to-b from-gray-100 to-gray-200;
+    @apply bg-gray-100 dark:bg-black;
   }
 
   h1,
@@ -29,9 +29,5 @@
 
   li {
     @apply cursor-pointer;
-  }
-
-  button {
-    @apply shadow-xl shadow-gray-400 rounded-lg uppercase bg-gradient-to-tr from-[#5b2ebd] to-[#709dff] text-white hover:scale-105 transition-all duration-300;
   }
 }

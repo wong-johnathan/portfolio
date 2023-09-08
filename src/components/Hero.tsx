@@ -55,7 +55,7 @@ const Hero = () => {
                 key={`${index}`}
                 target='_blank'
               >
-                <div className='p-4 rounded-full cursor-pointer shadow-md shadow-gray-400 cursor-ponter hover:scale-110 duration-300 hover:text-[#3bf6ae] text-[#763bf6] ease-in bg-white'>
+                <div className='p-4 rounded-full cursor-pointer shadow-md shadow-gray-400 cursor-ponter hover:scale-110 duration-300 hover:text-[#3bf6ae] text-[#763bf6] ease-in bg-white dark:text-white dark:bg-black dark:border dark:border-white dark:shadow'>
                   {<item.icon />}
                 </div>
               </Link>

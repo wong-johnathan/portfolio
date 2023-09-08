@@ -36,7 +36,7 @@ const Section = ({
     <div
       className={`${width} ${paddingY} flex ${justifyContent} ${alignItems} ${
         gradient ? gradient : ""
-      } ${gradientFrom} ${gradientEnd} ${flexDirection} ${height} ${gap}`}
+      } ${gradientFrom} ${gradientEnd} ${flexDirection} ${height} ${gap} dark:from-neutral-950 dark:to-[#0e0e0e]`}
       id={id}
     >
       {children}

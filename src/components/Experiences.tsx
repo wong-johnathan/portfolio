@@ -76,14 +76,15 @@ const Experiences = () => {
           }) => (
             <div
               key={`${jobTitle}-${companyName}`}
-              className='bg-gray-300 group border-[#763bf6] border cursor-pointer hover:bg-[#763bf6] w-full h-[60px] rounded-lg flex items-center justify-between px-8 transition-all duration-300 peer'
+              className='bg-gray-100 group border-[#763bf6]/50 border cursor-pointer hover:bg-[#763bf6] w-full h-[60px] rounded-lg flex items-center justify-between px-8 transition-all duration-300 peer 
+              dark:border-black dark:bg-neutral-700 dark:hover:bg-[#763bf6]'
             >
-              <h2 className='text-sm md:text-md text-[#763bf6] font-normal group-hover:text-gray-100 transition-all duration-300'>
+              <h2 className='text-sm md:text-md text-[#763bf6] font-normal group-hover:text-gray-100 transition-all duration-300 dark:text-white'>
                 {jobTitle} @{" "}
                 {companyName}
               </h2>
               <div className='flex-row items-center gap-8 md:flex hidden'>
-                <h2 className='text-sm text-[#763bf6] font-normal group-hover:text-gray-100 transition-all duration-300'>
+                <h2 className='text-sm text-[#763bf6] font-normal group-hover:text-gray-100 transition-all duration-300 dark:text-white'>
                   {from} - {to}
                 </h2>
               </div>
