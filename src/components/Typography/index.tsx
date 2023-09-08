@@ -30,7 +30,9 @@ export const TitleLarge = ({
         mdFontSize
           ? `md:${mdFontSize}`
           : ""
-      } ${fontWeight} ${width} ${color} ${textAlign} ${maxWidth}`}
+      } ${fontWeight} ${width} ${
+        color ?? ""
+      } ${textAlign} ${maxWidth ?? ""}`}
     >
       {children}
     </h1>
@@ -54,7 +56,9 @@ export const TitleMedium = ({
         mdFontSize
           ? `md:${mdFontSize}`
           : ""
-      } ${fontSize} ${width} ${color} ${textAlign} ${maxWidth}`}
+      } ${fontSize} ${width} ${
+        color ?? ""
+      } ${textAlign} ${maxWidth ?? ""}`}
     >
       {children}
     </h2>
@@ -78,7 +82,9 @@ export const TitleSmall = ({
         mdFontSize
           ? `md:${mdFontSize}`
           : ""
-      } ${fontWeight} ${width} ${color} ${textAlign} ${maxWidth}`}
+      } ${fontWeight} ${width} ${
+        color ?? ""
+      } ${textAlign} ${maxWidth ?? ""}`}
     >
       {children}
     </h2>
