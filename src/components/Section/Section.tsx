@@ -8,6 +8,13 @@ type SectionProps = {
   paddingY?: Tailwindest["paddingY"];
   justifyContent?: Tailwindest["justifyContent"];
   alignItems?: Tailwindest["alignItems"];
+  gradient?:
+    | Tailwindest["gradient"]
+    | null;
+  gradientFrom?: Tailwindest["gradientStart"];
+  gradientEnd?: Tailwindest["gradientEnd"];
+  flexDirection?: Tailwindest["flexDirection"];
+  height?:Tailwindest['height']
 };
 
 const Section = ({
@@ -17,10 +24,15 @@ const Section = ({
   paddingY = "py-16",
   justifyContent = "justify-center",
   alignItems = "items-center",
+  gradient = "bg-gradient-to-b",
+  gradientFrom = "from-gray-100",
+  gradientEnd = "to-gray-300",
+  flexDirection = "flex-col",
+  height
 }: SectionProps) => {
   return (
     <div
-      className={`${width} ${paddingY} flex items-center ${justifyContent} ${alignItems} bg-gradient-to-b from-gray-100 to-gray-300 flex-col`}
+      className={`${width} ${paddingY} flex ${justifyContent} ${alignItems} ${gradient} ${gradientFrom} ${gradientEnd} ${flexDirection} ${height}`}
       id={id}
     >
       {children}

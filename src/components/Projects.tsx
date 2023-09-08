@@ -2,14 +2,17 @@ import Image from "next/image";
 import projects from "./projectsJson";
 import React from "react";
 import Link from "next/link";
-import Title from "./Title";
+import SectionTitle from "./Typography/SectionTitle";
 import InnerSection from "./Section/InnerSection";
 import Section from "./Section/Section";
+import { BodyText } from "./Typography";
 
 const Projects = () => {
   return (
     <Section id='projects'>
-      <Title title='Projects' />
+      <SectionTitle>
+        Projects
+      </SectionTitle>
       <InnerSection className='grid grid-cols-2 gap-8 md:gap-16'>
         {projects().map((project) => (
           <React.Fragment
@@ -28,9 +31,9 @@ const Projects = () => {
               <div className='font-bold text-xl border-b-2 border-[#763bf6] text-[#763bf6]'>
                 {project.title}
               </div>
-              <div className='text-gray-700'>
+              <BodyText>
                 {project.summary}
-              </div>
+              </BodyText>
               <Link
                 href={`/project/${project.id}`}
               >

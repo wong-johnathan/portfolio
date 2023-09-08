@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import InnerSection from "@/components/Section/InnerSection";
 import SkillsBtn from "@/components/SkillsBtn";
-import Title from "@/components/Title";
+import SectionTitle from "@/components/Typography/SectionTitle";
 import projects from "@/components/projectsJson";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,10 +51,9 @@ export default function Project({
             alt={project.id}
             className='rounded-lg shadow-xl mx-auto mb-16 hover:scale-[102%] transition-all duration-300'
           />
-          <Title
-            title='About'
-            underlineAlignment='items-start'
-          />
+          <SectionTitle underlineAlignment='items-start'>
+            About
+          </SectionTitle>
           <div className='gap-8'>
             {project.paragraphs.map(
               (paragraph, index) => (
@@ -70,10 +69,9 @@ export default function Project({
         </InnerSection>
         <div className='w-full px-16 py-32 bg-gradient-to-b  from-gray-100 to-gray-300'>
           <div className='max-w-[1200px] flex justify-center h-full flex-col mx-auto'>
-            <Title
-              title='Technology'
-              underlineAlignment='items-start'
-            />
+            <SectionTitle underlineAlignment='items-start'>
+              Technology
+            </SectionTitle>
             <div className='flex flex-wrap gap-4 py-8'>
               {project.technologies.map(
                 (technology, index) => (

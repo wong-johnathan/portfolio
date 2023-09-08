@@ -1,30 +1,28 @@
 import { Tailwindest } from "tailwindest";
+import { TitleLarge } from ".";
+import { ReactNode } from "react";
 
-type TitleProps = {
-  title: string;
+type SectionTitleProps = {
+  children: ReactNode;
   underline?: boolean;
   underlineAlignment?: Tailwindest["alignItems"];
   fontSize?: Tailwindest["fontSize"];
+  uppercase?: "uppercase" | null;
 };
 
-const Title = ({
-  title,
+const SectionTitle = ({
+  children,
   underline = true,
   underlineAlignment = "items-center",
-  fontSize = "text-4xl",
-}: TitleProps) => (
+}: SectionTitleProps) => (
   <div
-    className={`flex flex-col ${underlineAlignment}`}
+    className={`flex flex-col ${underlineAlignment} gap-2`}
   >
-    <h1
-      className={`uppercase ${fontSize} font-bold w-full pb-2`}
-    >
-      {title}
-    </h1>
+    <TitleLarge>{children}</TitleLarge>
     {underline && (
       <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
     )}
   </div>
 );
 
-export default Title;
+export default SectionTitle;

@@ -3,20 +3,19 @@ import { skills } from "./NavLinks";
 import InnerSection from "./Section/InnerSection";
 import Section from "./Section/Section";
 import SkillsBtn from "./SkillsBtn";
-import Title from "./Title";
+import { BodyText } from "./Typography";
+import SectionTitle from "./Typography/SectionTitle";
 
 const About = () => {
   return (
     <Section id='about'>
-      <Title title='About' />
-      <InnerSection
-        className='md:grid grid-cols-2 gap-8'
-      >
+      <SectionTitle>About</SectionTitle>
+      <InnerSection className='md:grid grid-cols-2 gap-8'>
         <div className='col-span-1 mb-2 flex gap-3 flex-col'>
           <h2 className='text-xl'>
             Who I Am
           </h2>
-          <p className='text-gray-700'>
+          <BodyText>
             I'm Johnathan Wong, and I'm
             a full-stack developer &
             support engineer with a
@@ -27,13 +26,13 @@ const About = () => {
             everything from web
             development to game
             development.
-          </p>
-          <p className='text-gray-700'>
+          </BodyText>
+          <BodyText>
             I'm most comfortable using
             MongoDB, React, ExpressJS &
             NodeJS.
-          </p>
-          <p className='text-gray-700'>
+          </BodyText>
+          <BodyText>
             I have a good understanding
             of NoSQL & SQL databases
             like MongoDB, Postgres &
@@ -44,13 +43,13 @@ const About = () => {
             Docker Compose) as well as
             production (such as
             Kubernetes).
-          </p>
-          <p className='text-gray-700'>
+          </BodyText>
+          <BodyText>
             I love learning new things
             and am always looking for an
             opportunity to grow as a
             developer.
-          </p>
+          </BodyText>
         </div>
         <div className='col-span-1 mb-2'>
           <h2 className='text-xl'>

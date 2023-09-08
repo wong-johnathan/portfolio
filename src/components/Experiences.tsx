@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "./Title";
+import SectionTitle from "./Typography/SectionTitle";
 import InnerSection from "./Section/InnerSection";
 import Section from "./Section/Section";
 
@@ -65,7 +65,7 @@ const ExperiencesJson = () => {
 const Experiences = () => {
   return (
     <Section id='experiences'>
-      <Title title='Experiences' />
+      <SectionTitle >Experiences</SectionTitle>
       <InnerSection className='flex flex-col gap-4'>
         {ExperiencesJson().map(
           ({
