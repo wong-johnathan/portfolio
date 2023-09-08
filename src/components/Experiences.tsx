@@ -35,10 +35,9 @@ const Experiences = () => {
                 {companyName}
               </h2>
               <div className='flex-row items-center gap-8 md:flex hidden'>
-                <h2 className='text-md text-[#763bf6] font-normal group-hover:text-gray-100 transition-all duration-300'>
+                <h2 className='text-sm text-[#763bf6] font-normal group-hover:text-gray-100 transition-all duration-300'>
                   {from} - {to}
                 </h2>
-                <AiOutlinePlus className='text-md  text-[#763bf6] group-hover:text-gray-100 transition-all duration-300' />
               </div>
             </div>
           )
