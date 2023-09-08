@@ -5,7 +5,11 @@ import Link from "next/link";
 import SectionTitle from "./Typography/SectionTitle";
 import InnerSection from "./Section/InnerSection";
 import Section from "./Section/Section";
-import { BodyText } from "./Typography";
+import {
+  BodyText,
+  TitleMedium,
+  TitleSmall,
+} from "./Typography";
 
 const Projects = () => {
   return (
@@ -27,10 +31,10 @@ const Projects = () => {
                 className='hover:scale-105 transition-all duration-300'
               />
             </div>
-            <div className='col-span-2 md:col-span-1 flex gap-8 flex-col items-start justify-center'>
-              <div className='font-bold text-xl border-b-2 border-[#763bf6] text-[#763bf6]'>
+            <div className='col-span-2 md:col-span-1 flex gap-4 flex-col items-start justify-center'>
+              <TitleMedium textAlign='text-left'>
                 {project.title}
-              </div>
+              </TitleMedium>
               <BodyText>
                 {project.summary}
               </BodyText>
