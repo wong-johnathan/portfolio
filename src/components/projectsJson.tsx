@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 type projectType = {
   id: string;
   title: string;

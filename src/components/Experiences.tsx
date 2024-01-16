@@ -9,7 +9,7 @@ const ExperiencesJson = () => {
       jobTitle:
         "Support Solutions Engineer",
       companyName: "Smartly.io",
-      from: "Nov 2023",
+      from: "Nov 2021",
       to: "Present",
     },
     {
