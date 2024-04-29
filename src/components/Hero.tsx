@@ -13,7 +13,7 @@ const Hero = () => {
       id='home'
     >
       <div
-        className='absolute top-0 left-0 w-full h-screen opacity-20 z-[-1]'
+        className='absolute top-0 left-0 w-full h-screen opacity-20 dark:opacity-70 z-[-1]'
         style={{
           backgroundImage: `url(/bgpattern.png)`,
         }}
