@@ -7,16 +7,23 @@ const ExperiencesJson = () => {
   return [
     {
       jobTitle:
+        "Software Engineer",
+      companyName: "Knowledgecatalyst.io",
+      from: "Sep 2024",
+      to: "Present",
+    },
+    {
+      jobTitle:
         "Support Solutions Engineer",
       companyName: "Smartly.io",
       from: "Nov 2021",
-      to: "Present",
+      to: "Aug 2024",
     },
     {
       jobTitle: "React Developer",
       companyName: "Solveware Pte Ltd",
       from: "Apr 2021",
-      to: "Jul 2021",
+      to: "Sep 2021",
     },
     {
       jobTitle: "Software Engineer",
