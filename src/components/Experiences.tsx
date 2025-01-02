@@ -10,7 +10,7 @@ const ExperiencesJson = () => {
         "Software Engineer",
       companyName: "Knowledgecatalyst.io",
       from: "Sep 2024",
-      to: "Present",
+      to: "Dec 2024",
     },
     {
       jobTitle:
