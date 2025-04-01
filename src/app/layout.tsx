@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Head from "next/head";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "./theme-provider";
 
@@ -10,6 +9,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Johnathan Wong",
+  other: {
+    "facebook-domain-verification": "2u7jj352xacglo22lobwqdfurhd87e",
+  },
 };
 
 export default function RootLayout({
@@ -19,9 +21,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="facebook-domain-verification" content="2u7jj352xacglo22lobwqdfurhd87e" />
-      </Head>
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
