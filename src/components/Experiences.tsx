@@ -7,6 +7,13 @@ const ExperiencesJson = () => {
   return [
     {
       jobTitle:
+        "Technical Solutions Consultant",
+      companyName: "Meta",
+      from: "March 2025",
+      to: "Present",
+    },
+    {
+      jobTitle:
         "Software Engineer",
       companyName: "Knowledgecatalyst.io",
       from: "Sep 2024",
