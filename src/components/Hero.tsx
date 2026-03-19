@@ -33,18 +33,13 @@ const Hero = () => {
           </TitleLarge>
 
           <TitleLarge>
-            A Full-Stack Web Developer
+            Technical Solutions Consultant at Meta
           </TitleLarge>
           <BodyText maxWidth='max-w-[70%]'>
-            I am a seasoned software
-            engineer with a wealth of
-            experience spanning three
-            years. My expertise lies in
-            JavaScript, React.js, and
-            Express.js, where I have
-            honed my skills to create
-            robust and dynamic web
-            applications.
+            Software engineer and technical consultant with a background spanning
+            full-stack web development, blockchain, cloud/DevOps, and adtech.
+            Experienced across the full product lifecycle — from building microservices
+            and blockchain platforms to driving technical strategy for global ad clients.
           </BodyText>
         </div>
         <div className='w-full max-w-[50%] flex justify-center items-center flex-row py-6 space-x-4'>

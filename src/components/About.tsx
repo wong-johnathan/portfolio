@@ -29,8 +29,8 @@ const certifications = [
   },
   {
     name: "AWS Certified Cloud Practitioner",
-    issued: "Jul 2025",
-    expires: "Jan 2028",
+    issued: "Nov 2025",
+    expires: "Nov 2028",
     link: "https://www.credly.com/badges/6b82d62f-b691-4711-93c9-80bccbf0e201/linked_in_profile",
   },
 ];
@@ -45,39 +45,28 @@ const About = () => {
             Who I Am
           </h2>
           <BodyText>
-            I'm Johnathan Wong, and I'm
-            a full-stack developer &
-            support engineer with a
-            passion for building great
-            things. I've been working in
-            the IT industry since 2017,
-            and have worked on
-            everything from web
-            development to game
-            development.
+            I'm Johnathan Wong — a Technical Solutions Consultant at Meta and
+            software engineer with roots in full-stack development, blockchain,
+            cloud infrastructure, and adtech. I've been building things in tech
+            since 2012, across industries ranging from healthcare and education
+            to digital advertising.
           </BodyText>
           <BodyText>
-            I'm most comfortable using
-            MongoDB, React, ExpressJS &
-            NodeJS.
+            My engineering background covers the MERN stack, microservices
+            architecture, and cloud-native development on AWS and Google Cloud.
+            I've built blockchain certificate platforms, designed scalable
+            microservices with Node.js, PostgreSQL, Redis, and RabbitMQ, and
+            set up CI/CD pipelines with Docker and Kubernetes.
           </BodyText>
           <BodyText>
-            I have a good understanding
-            of NoSQL & SQL databases
-            like MongoDB, Postgres &
-            MySQL, and I'm also
-            experienced with setting up
-            scalable Docker environments
-            for development (such as
-            Docker Compose) as well as
-            production (such as
-            Kubernetes).
+            At Meta, I advise clients on technical implementations across the ads
+            ecosystem — spanning signals, measurement, and delivery — and work
+            closely with sales to support priority accounts and shape technical
+            strategy.
           </BodyText>
           <BodyText>
-            I love learning new things
-            and am always looking for an
-            opportunity to grow as a
-            developer.
+            I hold four AWS certifications and love staying current with
+            evolving technology.
           </BodyText>
         </div>
           <div className='col-span-1 mb-2'>

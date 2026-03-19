@@ -1,5 +1,5 @@
 import { SiGithub } from "react-icons/si";
-import { FaLinkedin, FaCode } from "react-icons/fa";
+import { FaLinkedin, FaGlobe } from "react-icons/fa";
 
 export const navItems = () => [
   {
@@ -13,6 +13,10 @@ export const navItems = () => [
   {
     text: "Experiences",
     link: "/#experiences",
+  },
+  {
+    text: "Education",
+    link: "/#education",
   },
   {
     text: "Projects",
@@ -30,25 +34,29 @@ export const socialMediaItems = () => [
     link: "https://github.com/wong-johnathan",
   },
   {
-    icon: FaCode,
-    link: "https://github.com/wong-johnathan/portfolio",
+    icon: FaGlobe,
+    link: "https://johnathanwwh.com",
   },
 ];
 
 export const skills = () => [
-  "HTML",
-  "CSS",
-  "Tailwind",
-  "Javascript",
+  "JavaScript",
+  "Python",
+  "Java",
+  "SQL",
   "React",
-  "NodeJs",
+  "Node.js",
   "Express",
-  "Git",
-  "Basic Github Actions",
+  "MongoDB",
+  "PostgreSQL",
+  "Redis",
   "Docker",
-  "Basic Kubernetes",
-  "Google Cloud Platform",
-  "MYSQL",
-  "Mongo",
-  "Photoshop",
+  "AWS",
+  "Google Cloud",
+  "CI/CD",
+  "Git",
+  "Kibana",
+  "Jira",
+  "IPFS",
+  "Web3",
 ];
