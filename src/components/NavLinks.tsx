@@ -1,8 +1,5 @@
-import {
-  SiCodereview,
-  SiGithub,
-  SiLinkedin,
-} from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { FaLinkedin, FaCode } from "react-icons/fa";
 
 export const navItems = () => [
   {
@@ -25,7 +22,7 @@ export const navItems = () => [
 
 export const socialMediaItems = () => [
   {
-    icon: SiLinkedin,
+    icon: FaLinkedin,
     link: "https://www.linkedin.com/in/johnathan-wong-362332192/",
   },
   {
@@ -33,7 +30,7 @@ export const socialMediaItems = () => [
     link: "https://github.com/wong-johnathan",
   },
   {
-    icon: SiCodereview,
+    icon: FaCode,
     link: "https://github.com/wong-johnathan/portfolio",
   },
 ];
