@@ -15,15 +15,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 type ProjectProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
-export default function Project({
+export default async function Project({
   params,
 }: ProjectProps) {
+  const { id } = await params;
   const project = projects().find(
     (project) =>
-      project.id === params.id
+      project.id === id
   );
 
   if (project)
