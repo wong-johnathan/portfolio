@@ -117,6 +117,7 @@ const Experiences = () => {
       <InnerSection className='flex flex-col gap-4'>
         {ExperiencesJson().map(({ jobTitle, companyName, to, from, bullets }, index) => {
           const isOpen = openIndex === index;
+          const hasContent = bullets.length > 0;
           return (
             <div
               key={`${jobTitle}-${companyName}`}
@@ -124,26 +125,31 @@ const Experiences = () => {
               dark:border-black'
             >
               <div
-                onClick={() => toggle(index)}
-                className={`group cursor-pointer w-full flex items-center justify-between px-8 py-4 transition-all duration-300
+                onClick={() => hasContent && toggle(index)}
+                className={`group w-full flex items-center justify-between px-8 py-4 transition-all duration-300
+                  ${hasContent ? "cursor-pointer" : "cursor-default"}
                   ${isOpen
                     ? "bg-[#763bf6]"
-                    : "bg-gray-100 hover:bg-[#763bf6] dark:bg-neutral-700 dark:hover:bg-[#763bf6]"
+                    : hasContent
+                      ? "bg-gray-100 hover:bg-[#763bf6] dark:bg-neutral-700 dark:hover:bg-[#763bf6]"
+                      : "bg-gray-100 dark:bg-neutral-700"
                   }`}
               >
                 <h2 className={`text-sm md:text-md font-normal transition-all duration-300
-                  ${isOpen ? "text-gray-100" : "text-[#763bf6] group-hover:text-gray-100 dark:text-white"}`}>
+                  ${isOpen ? "text-gray-100" : hasContent ? "text-[#763bf6] group-hover:text-gray-100 dark:text-white" : "text-[#763bf6] dark:text-white"}`}>
                   {jobTitle} @ {companyName}
                 </h2>
                 <div className='flex items-center gap-4'>
                   <h2 className={`text-sm font-normal transition-all duration-300 hidden md:block
-                    ${isOpen ? "text-gray-100" : "text-[#763bf6] group-hover:text-gray-100 dark:text-white"}`}>
+                    ${isOpen ? "text-gray-100" : hasContent ? "text-[#763bf6] group-hover:text-gray-100 dark:text-white" : "text-[#763bf6] dark:text-white"}`}>
                     {from} - {to}
                   </h2>
-                  <FaChevronDown
-                    className={`transition-transform duration-300 text-sm
-                      ${isOpen ? "rotate-180 text-gray-100" : "text-[#763bf6] group-hover:text-gray-100 dark:text-white"}`}
-                  />
+                  {hasContent && (
+                    <FaChevronDown
+                      className={`transition-transform duration-300 text-sm
+                        ${isOpen ? "rotate-180 text-gray-100" : "text-[#763bf6] group-hover:text-gray-100 dark:text-white"}`}
+                    />
+                  )}
                 </div>
               </div>
               {isOpen && (
