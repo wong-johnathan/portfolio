@@ -8,10 +8,17 @@ import { FaChevronDown } from "react-icons/fa";
 const ExperiencesJson = () => {
   return [
     {
+      jobTitle: "Senior Technical Support Engineer",
+      companyName: "Semgrep",
+      from: "Feb 2026",
+      to: "Present",
+      bullets: [],
+    },
+    {
       jobTitle: "Technical Solutions Consultant",
       companyName: "Meta",
       from: "Mar 2025",
-      to: "Present",
+      to: "Feb 2026",
       bullets: [
         "Advised clients on optimized implementations across Meta's ads ecosystem (signals, measurement, delivery)",
         "Resolved technical issues in client integrations to ensure reliable ad performance",
