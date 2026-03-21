@@ -52,6 +52,16 @@ export default async function Project({
                 {project.subtitle}
               </TitleSmall>
             )}
+            {project.url && (
+              <Link
+                href={project.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='mt-2 px-6 py-2 bg-[#763bf6] hover:bg-[#5f2fd4] text-white font-semibold rounded-lg transition-colors duration-200'
+              >
+                Visit Site
+              </Link>
+            )}
           </div>
         </div>
         <Section id='about'>
