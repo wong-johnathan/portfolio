@@ -56,6 +56,41 @@ const projects = (): projectType[] => [
       "React.js-based PWA project, emphasizing user-centric design, resulting in an innovative and user-friendly application.",
   },
   {
+    id: "resume-ai",
+    title: "Resume AI",
+    subtitle:
+      "An AI-powered resume builder and job application tracker with template-based PDF generation and streaming cover letter generation.",
+    paragraphs: [
+      "Resume AI is a full-stack monorepo application that combines structured profile management, AI-assisted resume tailoring, and a Kanban-style job application tracker into a single platform.",
+      "Key features include:",
+      "1. Resume Builder: Users build resumes from a structured profile with 20 professionally designed templates. A two-panel editor provides live preview with debounced updates, and multi-page PDFs are exported via Puppeteer.",
+      "2. PDF Import & Parsing: Users can upload an existing resume PDF which is parsed and auto-populates their profile fields, reducing manual data entry.",
+      "3. AI Integration: Resume tailoring generates a separate tailored clone for a specific job posting without modifying the original. Cover letter generation streams responses via Server-Sent Events with tone selection. A maximum of 3 AI amendments per job is enforced both server-side (HTTP 403) and client-side, with full amendment history tracking.",
+      "4. Job Application Tracker: A Kanban board with drag-and-drop (dnd-kit) and user-defined status categories (Saved, Applied, Interview, Offer, etc.) links applications to their associated resumes and cover letters.",
+      "The backend is an Express + TypeScript server with Passport.js Google OAuth authentication, Prisma 5 ORM on PostgreSQL, Zod request validation, and rate limiting on AI endpoints. The frontend is built with React 18, Vite, React Router v7, Zustand for state, and TipTap for rich text editing. Deployed across Vercel (frontend), Railway (backend + Puppeteer), and Supabase (PostgreSQL).",
+    ],
+    technologies: [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Puppeteer",
+      "Claude AI",
+      "Passport.js",
+      "Zustand",
+      "dnd-kit",
+      "Vercel",
+      "Railway",
+      "Supabase",
+    ],
+    image: "/resume-ai.png",
+    summary:
+      "Full-stack AI-powered resume builder with 20 templates, PDF export, AI tailoring and cover letter generation, and a Kanban job application tracker.",
+  },
+  {
     id: "3d-virtual-musuem-in-vr",
     title:
       "3D Virtual Museum Design in VR",
