@@ -7,6 +7,7 @@ type projectType = {
   image: string;
   summary: string;
   video?: string;
+  url?: string;
 };
 const projects = (): projectType[] => [
   {
@@ -87,6 +88,7 @@ const projects = (): projectType[] => [
       "Supabase",
     ],
     image: "/resume-ai.png",
+    url: "https://resume-ai.johnathanwwh.com",
     summary:
       "Full-stack AI-powered resume builder with 20 templates, PDF export, AI tailoring and cover letter generation, and a Kanban job application tracker.",
   },
