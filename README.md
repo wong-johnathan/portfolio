@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio — Johnathan Wong
 
-## Getting Started
+A responsive personal portfolio website built to showcase my skills, work experience, and projects as a software engineer and technical consultant.
 
-First, run the development server:
+## Purpose
+
+This portfolio serves as a centralized, professional presentation of who I am and what I've built. Rather than relying solely on a resume, it gives recruiters, collaborators, and clients a richer view of my background — including hands-on project work across full-stack development, blockchain, cloud/DevOps, and adtech.
+
+The site was built from scratch (not a template) to demonstrate practical frontend engineering skills: component architecture, responsive design, dark mode, dynamic routing, and clean TypeScript patterns.
+
+## Features
+
+- **About & Skills** — Overview of my background and technical stack
+- **Work Experience** — Interactive timeline of roles across Meta, Semgrep, and more
+- **Projects** — Filterable project cards with dedicated detail pages via dynamic routing (`/project/[id]`)
+- **Education** — Academic history
+- **Dark/Light Mode** — Class-based theme switching via `next-themes`
+- **Fully Responsive** — Mobile-first layout using Tailwind CSS breakpoints
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 13+ (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Theming | next-themes |
+| Icons | react-icons |
+| Deployment | Vercel |
+
+## Running Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # Production build
+npm run lint    # ESLint (next/core-web-vitals)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── layout.tsx              # Root layout with ThemeProvider
+│   ├── page.tsx                # Home page (server component)
+│   └── project/[id]/page.tsx  # Dynamic project detail pages
+├── components/
+│   ├── projectsJson.tsx        # Project data (typed)
+│   ├── NavLinks.tsx            # Nav items, social links, skills list
+│   ├── Hero.tsx                # Landing section
+│   ├── About.tsx
+│   ├── Experiences.tsx
+│   ├── Education.tsx
+│   ├── Projects.tsx
+│   └── ...
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [LinkedIn](https://www.linkedin.com/in/johnathan-wong-362332192/)
+- [GitHub](https://github.com/wong-johnathan)
