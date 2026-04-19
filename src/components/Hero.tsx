@@ -33,7 +33,7 @@ const Hero = () => {
           </TitleLarge>
 
           <TitleLarge>
-            Technical Support Engineer at <a href="https://semgrep.dev/">Semgrep</a>
+            Technical Support Engineer at <a href="https://semgrep.dev/" target="_blank">Semgrep</a>
           </TitleLarge>
           <BodyText maxWidth='max-w-[70%]'>
             Software engineer and technical consultant with a background spanning
