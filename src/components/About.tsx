@@ -45,7 +45,7 @@ const About = () => {
             Who I Am
           </h2>
           <BodyText>
-            I'm Johnathan Wong — a Technical Solutions Consultant at Meta and
+            I'm Johnathan Wong — a Technical Support Engineer at <a href="https://semgrep.dev/">Semgrep</a> and
             software engineer with roots in full-stack development, blockchain,
             cloud infrastructure, and adtech. I've been building things in tech
             since 2012, across industries ranging from healthcare and education
