@@ -45,6 +45,13 @@ const Projects = () => {
                   View More
                 </button>
               </Link>
+              {project.url && (
+                  <a href={project.url} target='_blank' rel='noopener noreferrer'>
+                    <button className='px-8 py-2 border text-[#763bf6] border-[#763bf6] hover:text-white hover:bg-[#763bf6] dark:text-white dark:border dark:hover:border-[#763bf6] dark:border-white rounded-md transition-all duration-300'>
+                      Visit Site
+                    </button>
+                  </a>
+                )}
             </div>
           </React.Fragment>
         ))}
