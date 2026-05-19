@@ -1,6 +1,6 @@
 # Personal Portfolio — Johnathan Wong
 
-A responsive personal portfolio website built to showcase my skills, work experience, and projects as a software engineer and technical consultant.
+A responsive personal portfolio website built to showcase my skills, work experience, and projects as a software engineer and technical consultant. blah blah
 
 ## Purpose
 
