@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import { socialMediaItems } from "./NavLinks";
 import Section from "./Section/Section";
