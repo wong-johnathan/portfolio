@@ -45,28 +45,28 @@ const About = () => {
             Who I Am
           </h2>
           <BodyText>
-            I'm Johnathan Wong — a Senior Technical Support Engineer at <a href="https://semgrep.dev/" target="_blank">Semgrep</a> and
-            software engineer with roots in full-stack development, blockchain,
+            I'm Johnathan Wong, a Senior Technical Support Engineer at <a href="https://semgrep.dev/" target="_blank">Semgrep</a> and
+            a software engineer with roots in full-stack development, blockchain,
             cloud infrastructure, and adtech. I've been building things in tech
             since 2012, across industries ranging from healthcare and education
             to digital advertising.
           </BodyText>
           <BodyText>
-            My engineering background covers the MERN stack, microservices
+            I work across the MERN stack, microservices
             architecture, and cloud-native development on AWS and Google Cloud.
             I've built blockchain certificate platforms, designed scalable
             microservices with Node.js, PostgreSQL, Redis, and RabbitMQ, and
             set up CI/CD pipelines with Docker and Kubernetes.
           </BodyText>
           <BodyText>
-            At Meta, I advise clients on technical implementations across the ads
-            ecosystem — spanning signals, measurement, and delivery — and work
-            closely with sales to support priority accounts and shape technical
+            At Meta, I advised clients on technical implementations across the ads
+            ecosystem, covering signals, measurement, and delivery, and worked
+            closely with sales on priority accounts and technical
             strategy.
           </BodyText>
           <BodyText>
-            I hold four AWS certifications and love staying current with
-            evolving technology.
+            I hold four AWS certifications and enjoy keeping up with
+            new tech.
           </BodyText>
         </div>
           <div className='col-span-1 mb-2'>

@@ -36,10 +36,9 @@ const Hero = () => {
             Senior Technical Support Engineer at <a href="https://semgrep.dev/" target="_blank">Semgrep</a>
           </TitleLarge>
           <BodyText maxWidth='max-w-[70%]'>
-            Software engineer and technical consultant with a background spanning
-            full-stack web development, blockchain, cloud/DevOps, and adtech.
-            Experienced across the full product lifecycle — from building microservices
-            and blockchain platforms to driving technical strategy for global ad clients.
+            I work across full-stack web development, blockchain, cloud/DevOps, and adtech.
+            I've built microservices and blockchain platforms, helped global ad clients
+            with their technical strategy, and shipped code from the frontend all the way down.
           </BodyText>
         </div>
         <div className='w-full max-w-[50%] flex justify-center items-center flex-row py-6 space-x-4'>
