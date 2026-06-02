@@ -5,6 +5,7 @@ import Section from "./Section/Section";
 import {
   BodyText,
   TitleLarge,
+  TitleMedium,
 } from "./Typography";
 
 const Hero = () => {
@@ -33,9 +34,9 @@ const Hero = () => {
             </span>
           </TitleLarge>
 
-          <TitleLarge>
+          <TitleMedium>
             Senior Technical Support Engineer at <a href="https://semgrep.dev/" target="_blank">Semgrep</a>
-          </TitleLarge>
+          </TitleMedium>
           <BodyText maxWidth='max-w-[70%]'>
             I work across full-stack web development, blockchain, cloud/DevOps, and adtech.
             I've built microservices and blockchain platforms, helped global ad clients

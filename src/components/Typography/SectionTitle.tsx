@@ -1,5 +1,4 @@
 import { Tailwindest } from "tailwindest";
-import { TitleLarge } from ".";
 import { ReactNode } from "react";
 
 type SectionTitleProps = {
@@ -18,7 +17,7 @@ const SectionTitle = ({
   <div
     className={`flex flex-col ${underlineAlignment} gap-2`}
   >
-    <TitleLarge>{children}</TitleLarge>
+    <h2 className="font-bold text-2xl md:text-4xl w-full text-center">{children}</h2>
     {underline && (
       <div className='border-4 border-[#763bf6] h-0 rounded-full w-10' />
     )}
