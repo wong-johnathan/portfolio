@@ -11,6 +11,38 @@ const siteUrl = "https://johnathanwwh.com";
 const siteDescription =
   "Senior Technical Support Engineer with 8+ years of experience in technical support, solutions consulting, and software engineering. 4x AWS Certified. Based in Singapore.";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Johnathan Wong",
+  jobTitle: "Senior Technical Support Engineer",
+  url: siteUrl,
+  sameAs: [
+    "https://github.com/wong-johnathan",
+    "https://linkedin.com/in/johnathan-wong-362332192",
+  ],
+  knowsAbout: [
+    "JavaScript", "TypeScript", "Python", "Node.js", "React",
+    "AWS", "Docker", "PostgreSQL", "Redis", "CI/CD",
+  ],
+  email: "wong.johnathanwh@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Singapore",
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Johnathan Wong",
+  url: siteUrl,
+  author: {
+    "@type": "Person",
+    name: "Johnathan Wong",
+  },
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Johnathan Wong | Senior Technical Support Engineer",
@@ -63,6 +95,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
