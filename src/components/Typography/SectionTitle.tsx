@@ -5,8 +5,6 @@ type SectionTitleProps = {
   children: ReactNode;
   underline?: boolean;
   underlineAlignment?: Tailwindest["alignItems"];
-  fontSize?: Tailwindest["fontSize"];
-  uppercase?: "uppercase" | null;
 };
 
 const SectionTitle = ({

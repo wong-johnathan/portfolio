@@ -23,6 +23,7 @@ const Navbar = () => {
       else setShadow(false);
     };
     window.addEventListener("scroll", handleShadow);
+    return () => window.removeEventListener("scroll", handleShadow);
   }, []);
 
   useEffect(() => {
@@ -56,9 +57,9 @@ const Navbar = () => {
             <ThemeSwitcher />
           </li>
         </ul>
-        <div className="md:hidden cursor-pointer" onClick={handleNav}>
+        <button className="md:hidden cursor-pointer" aria-label="Open menu" onClick={handleNav}>
           <AiOutlineMenu size={25} />
-        </div>
+        </button>
       </div>
       <div
         className={
@@ -83,12 +84,13 @@ const Navbar = () => {
           <div>
             <div className="flex justify-between items-center border-b pb-4">
               <Logo />
-              <div
+              <button
                 className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer dark:shadow"
+                aria-label="Close menu"
                 onClick={handleNav}
               >
                 <AiOutlineClose size={16} />
-              </div>
+              </button>
             </div>
           </div>
           <div>

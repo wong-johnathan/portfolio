@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className='bg-gray-800 shadow dark:bg-neutral-950'>
       <div className='w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between'>
         <span className='text-sm text-gray-500 sm:text-center dark:text-gray-400'>
-          © Copyright 2023. Made by{" "}
+          © Copyright {new Date().getFullYear()}. Made by{" "}
           <span className='underline font-bold'>
             Johnathan Wong
           </span>

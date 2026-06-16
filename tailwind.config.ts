@@ -6,7 +6,14 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        brand: "#763bf6",
+        "brand-secondary": "#3bf6ae",
+      },
+    },
+  },
   darkMode: ["class"],
   plugins: [require("@tailwindcss/aspect-ratio")],
 };

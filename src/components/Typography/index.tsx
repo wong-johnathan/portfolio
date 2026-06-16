@@ -62,13 +62,13 @@ export const TitleSmall = ({
   maxWidth,
 }: TypographyType) => {
   return (
-    <h2
+    <h3
       className={`${textTransform} text-md md:text-2xl ${fontWeight} ${width} ${
         color ?? ""
       } ${textAlign} ${maxWidth ?? ""}`}
     >
       {children}
-    </h2>
+    </h3>
   );
 };
 
@@ -87,7 +87,7 @@ export const BodyText = ({
 }: BodyTextProp) => {
   return (
     <p
-      className={`${color??''} ${maxWidth} text-xs md:text-sm  ${textAlign}`}
+      className={`${color??''} ${maxWidth} text-xs md:text-sm  ${textAlign ?? ''}`}
     >
       {children}
     </p>

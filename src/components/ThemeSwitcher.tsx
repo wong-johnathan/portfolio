@@ -18,6 +18,7 @@ export const ThemeSwitcher = () => {
   return (
     <button
       className={`p-2 rounded-md active:scale-100 duration-200 border border-black dark:bg-black/0 dark:border-white dark:border`}
+      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "light" ? <MdDarkMode /> : <MdLightMode />}

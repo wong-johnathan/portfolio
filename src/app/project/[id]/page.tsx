@@ -11,6 +11,7 @@ import {
 } from "@/components/Typography";
 import SectionTitle from "@/components/Typography/SectionTitle";
 import projects from "@/components/projectsJson";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -143,5 +144,5 @@ export default async function Project({
         <Footer />
       </main>
     );
-  return "";
+  notFound();
 }
