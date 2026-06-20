@@ -93,6 +93,39 @@ const projects = (): projectType[] => [
       "Full-stack AI-powered resume builder with 20 templates, PDF export, AI tailoring and cover letter generation, and a Kanban job application tracker.",
   },
   {
+    id: "spliteasy",
+    title: "SplitEasy",
+    subtitle:
+      "A full-stack Splitwise clone — split expenses with friends, built with Docker Compose, Express, React, and PostgreSQL.",
+    paragraphs: [
+      "SplitEasy is a full-stack expense-splitting app I built as a clone of Splitwise with some extra features. The goal was to build a production-quality Docker Compose stack from scratch, covering everything from database migrations to multi-currency support.",
+      "Key features include:",
+      "1. Group expense splitting with equal and custom splits, plus a greedy debt simplification algorithm that minimises the number of settlement transactions needed to clear a group.",
+      "2. Multi-currency support with live FX rates from the Frankfurter API, cached in PostgreSQL with 24-hour TTL. Expenses store both their native currency and the converted base amount.",
+      "3. Google OAuth authentication with JWT tokens, real-time WebSocket updates, and a clean shadcn/ui interface with spending breakdown charts.",
+      "4. Full Docker Compose orchestration with PostgreSQL 16, Redis 7 for caching, health checks, and idempotent migration runs on every startup.",
+      "The app is deployed on my Synology NAS via Docker and serves as my daily driver for tracking shared expenses.",
+    ],
+    technologies: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Express",
+      "PostgreSQL",
+      "Redis",
+      "Docker Compose",
+      "JWT",
+      "Google OAuth",
+      "WebSocket",
+    ],
+    image: "/splitwise.png",
+    summary:
+      "Full-stack Splitwise clone with debt simplification, multi-currency FX rates, Google OAuth, WebSocket real-time updates, and Docker Compose deployment on Synology NAS.",
+    url: "https://splitwise.johnathanwwh.com",
+  },
+  {
     id: "3d-virtual-musuem-in-vr",
     title:
       "3D Virtual Museum Design in VR",
