@@ -126,6 +126,38 @@ const projects = (): projectType[] => [
     url: "https://splitwise.johnathanwwh.com",
   },
   {
+    id: "lorcana-management",
+    title: "Lorcana Inventory Manager",
+    subtitle:
+      "A personal card inventory system for Disney Lorcana TCG collectors — AI-powered card scanning, collection tracking, and a searchable card database.",
+    paragraphs: [
+      "Built a full-stack inventory manager for Disney Lorcana TCG after I got tired of manually tracking my collection. The core workflow is dead simple: snap a photo of your cards, Gemini 2.5 Flash identifies them, and they're added to your inventory. Batch scan up to 50 cards at once.",
+      "Key features:",
+      "1. AI Card Recognition — Gemini Flash matches photos against the card database and auto-adds them to inventory. Falls back gracefully to manual search when the API key isn't configured.",
+      "2. Collection Dashboard — Tracks normal and foil/enchanted quantities separately, with stats showing unique cards, total count, and per-set completion breakdowns.",
+      "3. Full Card Database — Browse every Lorcana card with filtering by set, color, rarity, type, character, and ownership status. Card data sourced from LorcanaJSON, seeded on startup and refreshable when new sets drop.",
+      "4. Multi-User with JWT Auth — Each collector gets an isolated inventory with bcrypt password hashing, so multiple people can track their own collections on the same instance.",
+      "The stack is Express 5 + Prisma on PostgreSQL 16, React 19 + Vite + Tailwind on the frontend, all orchestrated with Docker Compose behind an Nginx reverse proxy. CI/CD via GitHub Actions builds and pushes Docker images to DockerHub on every push to main. Deployed on my Synology NAS.",
+    ],
+    technologies: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Express 5",
+      "PostgreSQL",
+      "Prisma",
+      "JWT",
+      "Gemini 2.5 Flash",
+      "Docker Compose",
+      "Nginx",
+      "GitHub Actions",
+    ],
+    image: "/lorcana.png",
+    summary:
+      "Full-stack Lorcana TCG inventory manager with AI card recognition via Gemini Flash, collection statistics, multi-user JWT auth, and Docker Compose deployment.",
+  },
+  {
     id: "3d-virtual-musuem-in-vr",
     title:
       "3D Virtual Museum Design in VR",
